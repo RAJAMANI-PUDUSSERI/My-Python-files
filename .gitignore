@@ -7,7 +7,7 @@ __pycache__/
 *.pyo
 *.pyd
 *.py
-git add -f my_special_script.py
+
 
 
 # --- Ignore virtual environments ---
