@@ -1,6 +1,46 @@
 # Ignore everything in this repository (keeps only .gitignore tracked)
 /*
 !.gitignore
+# --- Ignore all Python cache files ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py
+git add -f my_special_script.py
+
+
+# --- Ignore virtual environments ---
+venv/
+env/
+.venv/
+.env/
+
+# --- Ignore editor settings ---
+.vscode/
+.idea/
+
+# --- Ignore logs and temp files ---
+*.log
+*.tmp
+*.temp
+
+# --- Ignore Jupyter Notebook checkpoints ---
+.ipynb_checkpoints/
+
+# --- Ignore packaging/build artifacts ---
+build/
+dist/
+*.egg-info/
+
+# --- Ignore environment variable files ---
+*.env
+.env.*
+
+# --- Ignore OS-specific clutter ---
+.DS_Store
+Thumbs.db
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
