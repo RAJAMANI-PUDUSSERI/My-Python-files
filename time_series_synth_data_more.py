@@ -1,3 +1,9 @@
+"""Generating Time Series Synthetic Data :
+Synthetic data is not just limited to static tables.
+Many systems produce sequences over time, such as app traffic, sensor readings, orders per hour, or server response times.
+Here is a simple time series generator for hourly website visits with weekday patterns.
+This version is refactored to be more modular and extensible, allowing for easier adjustments to patterns and effects."""
+
 import csv
 import random
 from datetime import datetime, timedelta
@@ -29,7 +35,7 @@ def apply_seasonal_effects(base:int, ts):
         base -= 25
     return base
 
-def apply_custom_patterns(base, hour, patterns):
+def apply_custom_patterns(base:int, hour:int, patterns:dict):
     for p in patterns.values():
         start, end = p["range"]
         if start <= hour <= end:
@@ -56,6 +62,7 @@ custom_patterns = {
     "late_night": {"range": (22, 23), "adjust": -20},
     "lunch_dip": {"range": (12, 14), "adjust": -25},
 }
+
 rows = []
 
 for i in range(hours):

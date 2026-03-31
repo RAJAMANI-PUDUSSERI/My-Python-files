@@ -1,3 +1,8 @@
+"""Generating Time Series Synthetic Data :
+Synthetic data is not just limited to static tables.
+Many systems produce sequences over time, such as app traffic, sensor readings, orders per hour, or server response times.
+Here is a simple time series generator for hourly website visits with weekday patterns."""
+
 import csv
 import random
 from datetime import datetime, timedelta
@@ -6,8 +11,8 @@ import math
 filename = 'D:/My Python files/visits_timeseries.csv'
 random.seed(42)
 
-start = datetime(2026,1,1,0,0)
-hours = 24*30
+start = datetime(2026,1,1,0,0) 
+hours = 24*30 # that many number of hours in 30 days
 rows = []
 
 for i in range(hours):
