@@ -22,7 +22,8 @@ for user_id in range(1, 201):
         event = random.choice(events)
 
         if event == "purchase" and random.random() < 0.6:
-            value = round(random.uniform(10, 300), 2) #round to 2 decimal places
+            # round to 2 decimal places
+            value = round(random.uniform(10, 300), 2)
         else:
             value = 0.0
 
